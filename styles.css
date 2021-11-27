@@ -9,29 +9,23 @@
 }
 
 input, textarea, select {
-    display: block; 
-    width: 100%;  
+    
     background-color: #F5F5F5; 
     border: none; 
     border-radius: 4px;
     padding: 14px;
 }
 
- .inline {
-   display: inline;
-  }
-
   label {
-    display: block;
-    margin: 16px 0 8px 0;
+    
+    margin: 18px 0 10px 0;
     color: gray;
     font-size: 14px;
   }
 
 input[type="radio"],
 input[type="checkbox"] {
-  display: inline;
-  width: auto; 
+ 
   margin: 0 7px 15px 0; 
 }
 
@@ -63,7 +57,7 @@ button {
   width: 50%;
 }
 
-.heading{
+.heading {
   text-transform: uppercase; 
   background-color:#364559;
   color: white;
@@ -100,15 +94,12 @@ legend{
 textarea {
   padding: 30px 0;
   margin-top: 14px;
-}
-
-#zip {
-  margin-bottom: 19px;
+  width: 100%;
 }
 
 .p-2 {
   line-height: 1.5em;
-  margin: 15px 0;
+  margin: 12px 0;
 }
 
 .format {
@@ -124,13 +115,10 @@ input[type="email"]::placeholder {
   opacity: 0.5;
   }
 
-select[option] {
-  background: orange;
-}
-
 input:focus, 
 textarea:focus,
-select:focus {
+select:focus,
+button:focus {
   outline: 2px solid #2F5D75;
 }
 
@@ -139,32 +127,34 @@ input[type="checkbox"]:focus {
   outline: none;
 }
 
+.end {
+margin-top: 12px;
+}
+
+.container,
+.contact {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.zip-code {
+  margin-bottom: 19px;
+}
+
 /* ------- Media Query --------*/
 
 @media screen and (min-width: 768px) {
 
-label {
-  float: left;
-  display: inline-block;
-  width: 30%;
-  margin: 17px 0;
+label { 
+  width: 28%;
+  margin: 0;
 }
 
 input,
 select {
-  width: 70%;
-  margin: 17px 0; 
-}
-
-.inline,
-.p-2,
-.format {
-  float:none;
-  width:100%; 
-}
-
-.end {
-  width:400px;
+  width:  72%;
+  margin: 9px 0;  
 }
 
 h2 {
@@ -176,17 +166,9 @@ h2 {
   margin: 0 125px 3px 125px;
 }
 
-label[for="name"] {
-  padding-top: 17px;
-  margin-top: 20px;
-}
-
-input[id="name"] {
-  margin-top: 20px;
-}
-
 legend {
   padding-top: 42px;
+  padding-bottom: 12px;
 }
 
 fieldset {
@@ -194,10 +176,33 @@ fieldset {
   margin: 0 100px;
 }
 
-#zip {
-  width: 30%;
-  margin-bottom: 42px;
+.zip-code {
+  margin-bottom: 38px;
 }
+
+input[type="radio"],
+input[type="checkbox"] {
+  width:auto;
+}
+
+.container,
+.contact {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+   justify-content: space-between;  
+}
+
+.zip-code {
+  display:flex;
+  justify-content: left;
+}
+
+#zip {
+  width: 18%;
+}
+
 }
 
 
